@@ -1,21 +1,21 @@
 import {
-  creator,
   linkedin,
   github,
   medium,
   resume,
   javascript,
-  typescript,
   html,
   css,
   reactjs,
   redux,
   tailwind,
   nodejs,
-  mongodb,
-  git,
-  figma,
-  docker,
+  vite,
+  postgresql,
+  python,
+  flask,
+
+  //company
   meta,
   starbucks,
   tesla,
@@ -23,7 +23,6 @@ import {
   carrent,
   jobit,
   tripguide,
-  threejs,
 } from "../assets";
 
 export const navLinks = [
@@ -74,20 +73,16 @@ const socials = [
 
 const technologies = [
   {
-    name: "HTML 5",
-    icon: html,
+    name: "JavaScript",
+    icon: javascript,
   },
   {
     name: "CSS 3",
     icon: css,
   },
   {
-    name: "JavaScript",
-    icon: javascript,
-  },
-  {
-    name: "TypeScript",
-    icon: typescript,
+    name: "HTML 5",
+    icon: html,
   },
   {
     name: "React JS",
@@ -102,28 +97,24 @@ const technologies = [
     icon: tailwind,
   },
   {
-    name: "Node JS",
+    name: "Node/Express",
     icon: nodejs,
   },
   {
-    name: "MongoDB",
-    icon: mongodb,
+    name: "Vite",
+    icon: vite,
   },
   {
-    name: "Three JS",
-    icon: threejs,
+    name: "PostgreSQL",
+    icon: postgresql,
   },
   {
-    name: "git",
-    icon: git,
+    name: "Python",
+    icon: python,
   },
   {
-    name: "figma",
-    icon: figma,
-  },
-  {
-    name: "docker",
-    icon: docker,
+    name: "Flask",
+    icon: flask,
   },
 ];
 
