@@ -7,19 +7,45 @@ import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 const Contact = () => {
   const formRef = useRef();
-  const [form, setForm] = useState({
+  const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
   });
 
-  const [loading, setLoading] = useState(false);
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
 
-  const handleChange = (e) => {};
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
 
-  const handleSubmit = (e) => {};
+    try {
+      await emailjs.send(
+        import.meta.env.VITE_REACT_APP_EMAILJS_SERVICEID,
+        import.meta.env.VITE_REACT_APP_EMAILJS_TEMPLATEID,
+        formData,
+        import.meta.env.VITE_REACT_APP_EMAILJS_USERID
+      );
+      toast.success("Message sent", {
+        backgroundColor: "green",
+        color: "white",
+      });
+      setFormData({ name: "", email: "", message: "" });
+    } catch (err) {
+      console.error("Failed to send message. Error: ", err);
+      toast.error("Failed to send message", {
+        backgroundColor: "red",
+        color: "white",
+      });
+    }
+  };
 
   return (
     <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden">
@@ -40,7 +66,7 @@ const Contact = () => {
             <input
               type="text"
               name="name"
-              value={form.name}
+              value={formData.name}
               onChange={handleChange}
               placeholder="What's your name?"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
@@ -51,7 +77,7 @@ const Contact = () => {
             <input
               type="email"
               name="email"
-              value={form.email}
+              value={formData.email}
               onChange={handleChange}
               placeholder="What's your email?"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
@@ -62,7 +88,7 @@ const Contact = () => {
             <textarea
               rows="7"
               name="message"
-              value={form.message}
+              value={formData.message}
               onChange={handleChange}
               placeholder="What do you want to say?"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
@@ -70,9 +96,9 @@ const Contact = () => {
           </label>
           <button
             type="submit"
-            className="bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl"
+            className="bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl hover:scale-[0.95]"
           >
-            {loading ? "Sending..." : "Send"}
+            Send
           </button>
         </form>
       </motion.div>
