@@ -1,8 +1,9 @@
 import {
-  mobile,
-  backend,
   creator,
-  web,
+  linkedin,
+  github,
+  medium,
+  resume,
   javascript,
   typescript,
   html,
@@ -48,22 +49,26 @@ export const navLinks = [
   },
 ];
 
-const services = [
+const socials = [
   {
-    title: "Web Developer",
-    icon: web,
+    title: "LinkedIn",
+    icon: linkedin,
+    url: "https://www.linkedin.com/in/brian-bissette/",
   },
   {
-    title: "React Native Developer",
-    icon: mobile,
+    title: "Github",
+    icon: github,
+    url: "https://github.com/bbissette3",
   },
   {
-    title: "Backend Developer",
-    icon: backend,
+    title: "Medium",
+    icon: medium,
+    url: "https://medium.com/@bbissette3",
   },
   {
-    title: "Content Creator",
-    icon: creator,
+    title: "Resume",
+    icon: resume,
+    url: "https://drive.google.com/file/d/1AZ2jz9ZgZYwwhbRoyCFZGVwPakLsYXlm/view?usp=sharing",
   },
 ];
 
@@ -270,4 +275,4 @@ const projects = [
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export { socials, technologies, experiences, testimonials, projects };

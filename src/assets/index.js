@@ -1,9 +1,11 @@
 import bb from "./bb.png";
-import backend from "./backend.png";
 import creator from "./creator.png";
 import mobile from "./mobile.png";
-import web from "./web.png";
+import linkedin from "./linkedin.png";
 import github from "./github.png";
+import medium from "./medium.png";
+import resume from "./resume.png";
+
 import menu from "./menu.svg";
 import close from "./close.svg";
 
@@ -32,11 +34,12 @@ import tripguide from "./tripguide.png";
 
 export {
   bb,
-  backend,
   creator,
   mobile,
-  web,
+  linkedin,
   github,
+  medium,
+  resume,
   menu,
   close,
   css,
