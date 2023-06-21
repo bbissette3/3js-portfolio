@@ -35,18 +35,19 @@ const About = () => {
     <>
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>Introduction</p>
-        <h2 className={styles.sectionHeadText}>Overview.</h2>
+        <h2 className={styles.sectionHeadText}>About Me.</h2>
       </motion.div>
 
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
-        Im' a skilled software developer with experience in JavaScript and React
-        and expertise in frameworks like React, Node.js, and Express.js I'm a
-        quick learner and collaborate closely with clients to create efficient,
-        scalable, and user-friendly solutions that solve real-world problems.
-        Lets work together to bring your ideas to life!
+        I'm a disciplined and adaptable Full Stack Software Developer based in
+        Katy, Texas. With a background in the U.S. Navy, I honed my
+        problem-solving skills and analytical thinking while maintaining complex
+        software systems. Today, I thrive on the challenge of developing robust
+        and scalable solutions, continuously learning and evolving with the
+        ever-changing technology landscape.
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10">
