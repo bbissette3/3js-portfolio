@@ -6,6 +6,7 @@ import resume from "./resume.png";
 
 import menu from "./menu.svg";
 import close from "./close.svg";
+import internet from "./internet.png";
 
 import css from "./tech/css.png";
 import html from "./tech/html.png";
@@ -23,6 +24,12 @@ import sequelize from "./tech/sequelize.png";
 import mui from "./tech/mui.png";
 import semanticui from "./tech/semanticui.png";
 
+import studysphere from "./projects/studysphere.png";
+import music from "./projects/music.png";
+import botdecimation from "./projects/botdecimation.png";
+import swolldiers from "./projects/swolldiers.png";
+import petadopter from "./projects/petadopter.png";
+
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
@@ -36,6 +43,7 @@ export {
   resume,
   menu,
   close,
+  internet,
   css,
   html,
   javascript,
@@ -51,6 +59,13 @@ export {
   sequelize,
   mui,
   semanticui,
+
+  //projects
+  studysphere,
+  music,
+  botdecimation,
+  swolldiers,
+  petadopter,
 
   //company
   meta,

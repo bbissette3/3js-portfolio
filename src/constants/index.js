@@ -19,6 +19,13 @@ import {
   mui,
   semanticui,
 
+  //projects
+  studysphere,
+  music,
+  botdecimation,
+  swolldiers,
+  petadopter,
+
   //company
   meta,
   starbucks,
@@ -219,67 +226,148 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "Study Sphere",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "A collaborative study app that enables creation and sharing of topics and resources. Its features also promote efficient time management for structured learning.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "vite",
         color: "green-text-gradient",
       },
       {
         name: "tailwind",
         color: "pink-text-gradient",
       },
+      {
+        name: "node",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "express",
+        color: "green-text-gradient",
+      },
+      {
+        name: "sequelize",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "postgresql",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "jwt",
+        color: "green-text-gradient",
+      },
+      {
+        name: "redux",
+        color: "pink-text-gradient",
+      },
     ],
-    // image: carrent,
-    source_code_link: "https://github.com/",
+    image: studysphere,
+    source_code_link: "https://github.com/bbissette3/study-sphere",
+    second_source_code_link: "https://github.com/bbissette3/study-sphere-api",
+    web_link: "https://study-sphere.onrender.com/",
   },
   {
-    name: "Job IT",
+    name: "Pet Adopter",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "An interactive platform that links potential pet owners with adoptable pets from various shelters, encouraging users to share shelter experiences to guide others in their adoption journey.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "Material UI",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "Python",
         color: "pink-text-gradient",
       },
-    ],
-    // image: jobit,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Trip Guide",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-    tags: [
       {
-        name: "nextjs",
+        name: "Flask",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "SqlAlchemy",
+        color: "green-text-gradient",
+      },
+    ],
+    image: petadopter,
+    source_code_link: "https://github.com/FredPerez15/pet-adopter",
+    web_link: "https://www.loom.com/share/9eb489ed66ac4521a1db8b8c73b96210",
+  },
+  {
+    name: "Bot Decimation",
+    description:
+      "A CLI game that offers a dynamic gaming experience with unique character crafting, combat with AI or other players, and an immersive arena mode for a captivating, strategic gameplay.",
+    tags: [
+      {
+        name: "Python",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Flask",
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "SqlAlchemy",
         color: "pink-text-gradient",
       },
     ],
-    // image: tripguide,
-    source_code_link: "https://github.com/",
+    image: botdecimation,
+    source_code_link: "https://github.com/bbissette3/phase-3-project-group-3",
+    web_link: "https://www.loom.com/share/1722c223289b49579027c9fb5f48a383",
+  },
+  {
+    name: "Swolldiers",
+    description:
+      "A fitness application offering a library of exercises with GIFs and difficulty ratings, allowing users to discover, curate, and follow workouts tailored to their fitness level.",
+    tags: [
+      {
+        name: "JavaScript",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "React",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Auth0",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "JSON",
+        color: "blue-text-gradient",
+      },
+    ],
+    image: swolldiers,
+    source_code_link:
+      "https://github.com/bbissette3/phase-2-group-project-swolldiers",
+    web_link: null,
+  },
+  {
+    name: "Music Lover",
+    description:
+      "A dynamic music management app that allows users to curate their personal music library, rate tracks, and create customized playlists based on preferences, providing a personalized and interactive music journey.",
+    tags: [
+      {
+        name: "JavaScript",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "JSON",
+        color: "green-text-gradient",
+      },
+    ],
+    image: music,
+    source_code_link: "https://github.com/bbissette3/group-2-phase-1-project",
+    web_link: null,
   },
 ];
 
