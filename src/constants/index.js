@@ -14,15 +14,16 @@ import {
   postgresql,
   python,
   flask,
+  restfulapi,
+  sequelize,
+  mui,
+  semanticui,
 
   //company
   meta,
   starbucks,
   tesla,
   shopify,
-  carrent,
-  jobit,
-  tripguide,
 } from "../assets";
 
 export const navLinks = [
@@ -115,6 +116,22 @@ const technologies = [
   {
     name: "Flask",
     icon: flask,
+  },
+  {
+    name: "Restful API",
+    icon: restfulapi,
+  },
+  {
+    name: "Sequelize",
+    icon: sequelize,
+  },
+  {
+    name: "Material UI",
+    icon: mui,
+  },
+  {
+    name: "Semantic UI",
+    icon: semanticui,
   },
 ];
 
@@ -219,7 +236,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
+    // image: carrent,
     source_code_link: "https://github.com/",
   },
   {
@@ -240,7 +257,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
+    // image: jobit,
     source_code_link: "https://github.com/",
   },
   {
@@ -261,7 +278,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
+    // image: tripguide,
     source_code_link: "https://github.com/",
   },
 ];

@@ -18,15 +18,15 @@ import vite from "./tech/vite.png";
 import postgresql from "./tech/postgresql.png";
 import python from "./tech/python.png";
 import flask from "./tech/flask.png";
+import restfulapi from "./tech/restfulapi.png";
+import sequelize from "./tech/sequelize.png";
+import mui from "./tech/mui.png";
+import semanticui from "./tech/semanticui.png";
 
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
-
-import carrent from "./carrent.png";
-import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
 
 export {
   bb,
@@ -47,13 +47,14 @@ export {
   postgresql,
   python,
   flask,
+  restfulapi,
+  sequelize,
+  mui,
+  semanticui,
 
   //company
   meta,
   shopify,
   starbucks,
   tesla,
-  carrent,
-  jobit,
-  tripguide,
 };
