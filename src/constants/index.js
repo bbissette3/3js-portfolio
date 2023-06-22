@@ -14,10 +14,7 @@ import {
   postgresql,
   python,
   flask,
-  restfulapi,
   sequelize,
-  mui,
-  semanticui,
 
   //projects
   studysphere,
@@ -125,20 +122,8 @@ const technologies = [
     icon: flask,
   },
   {
-    name: "Restful API",
-    icon: restfulapi,
-  },
-  {
     name: "Sequelize",
     icon: sequelize,
-  },
-  {
-    name: "Material UI",
-    icon: mui,
-  },
-  {
-    name: "Semantic UI",
-    icon: semanticui,
   },
 ];
 

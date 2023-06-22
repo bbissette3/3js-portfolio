@@ -19,10 +19,7 @@ import vite from "./tech/vite.png";
 import postgresql from "./tech/postgresql.png";
 import python from "./tech/python.png";
 import flask from "./tech/flask.png";
-import restfulapi from "./tech/restfulapi.png";
 import sequelize from "./tech/sequelize.png";
-import mui from "./tech/mui.png";
-import semanticui from "./tech/semanticui.png";
 
 import studysphere from "./projects/studysphere.png";
 import music from "./projects/music.png";
@@ -55,10 +52,7 @@ export {
   postgresql,
   python,
   flask,
-  restfulapi,
   sequelize,
-  mui,
-  semanticui,
 
   //projects
   studysphere,
