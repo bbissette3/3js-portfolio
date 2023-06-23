@@ -5,12 +5,13 @@ import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 
 import { styles } from "../styles";
-import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+
+import { LetterBCanvas } from "./canvas";
 
 const validationSchema = Yup.object({
   name: Yup.string().required("Please enter your name."),
@@ -115,7 +116,7 @@ const Contact = () => {
         variants={slideIn("right", "tween", 0.2, 1)}
         className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
       >
-        <EarthCanvas />
+        <LetterBCanvas />
       </motion.div>
     </div>
   );
