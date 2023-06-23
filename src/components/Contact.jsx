@@ -1,4 +1,6 @@
-import { useState, useRef } from "react";
+import { useFormik } from "formik";
+import * as Yup from "yup";
+
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 
@@ -10,41 +12,35 @@ import { slideIn } from "../utils/motion";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+const validationSchema = Yup.object({
+  name: Yup.string().required("Please enter your name."),
+  email: Yup.string().email("Invalid email address").required("Required"),
+  message: Yup.string().required("Please enter your message."),
+});
+
 const Contact = () => {
-  const formRef = useRef();
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
+  const formik = useFormik({
+    initialValues: {
+      name: "",
+      email: "",
+      message: "",
+    },
+    validationSchema,
+    onSubmit: async (values) => {
+      try {
+        await emailjs.send(
+          import.meta.env.VITE_REACT_APP_EMAILJS_SERVICEID,
+          import.meta.env.VITE_REACT_APP_EMAILJS_TEMPLATEID,
+          values,
+          import.meta.env.VITE_REACT_APP_EMAILJS_USERID
+        );
+        toast.success("Message sent");
+        formik.resetForm();
+      } catch (err) {
+        toast.error("Failed to send message");
+      }
+    },
   });
-
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    try {
-      await emailjs.send(
-        import.meta.env.VITE_REACT_APP_EMAILJS_SERVICEID,
-        import.meta.env.VITE_REACT_APP_EMAILJS_TEMPLATEID,
-        formData,
-        import.meta.env.VITE_REACT_APP_EMAILJS_USERID
-      );
-      toast.success("Message sent", {
-        backgroundColor: "green",
-        color: "white",
-      });
-      setFormData({ name: "", email: "", message: "" });
-    } catch (err) {
-      console.error("Failed to send message. Error: ", err);
-      toast.error("Failed to send message", {
-        backgroundColor: "red",
-        color: "white",
-      });
-    }
-  };
 
   return (
     <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden">
@@ -56,8 +52,7 @@ const Contact = () => {
         <h3 className={`${styles.sectionHeadText}`}>Contact.</h3>
 
         <form
-          ref={formRef}
-          onSubmit={handleSubmit}
+          onSubmit={formik.handleSubmit}
           className="mt-12 flex flex-col gap-8"
         >
           <label className="flex flex-col">
@@ -65,33 +60,48 @@ const Contact = () => {
             <input
               type="text"
               name="name"
-              value={formData.name}
-              onChange={handleChange}
+              onChange={formik.handleChange}
+              value={formik.values.name}
               placeholder="What's your name?"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
             />
+            {formik.errors.name ? (
+              <div className="pl-5 pt-2 text-red-500 opacity-100">
+                {formik.errors.name}
+              </div>
+            ) : null}
           </label>
           <label className="flex flex-col">
             <span className="text-white font-medium mb-4">Your Email</span>
             <input
               type="email"
               name="email"
-              value={formData.email}
-              onChange={handleChange}
+              onChange={formik.handleChange}
+              value={formik.values.email}
               placeholder="What's your email?"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
             />
+            {formik.errors.email ? (
+              <div className="pl-5 pt-2 text-red-500 opacity-100">
+                {formik.errors.email}
+              </div>
+            ) : null}
           </label>
           <label className="flex flex-col">
             <span className="text-white font-medium mb-4">Your Message</span>
             <textarea
               rows="7"
               name="message"
-              value={formData.message}
-              onChange={handleChange}
+              onChange={formik.handleChange}
+              value={formik.values.message}
               placeholder="What do you want to say?"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
             />
+            {formik.errors.message ? (
+              <div className="pl-5 pt-2 text-red-500 opacity-100">
+                {formik.errors.message}
+              </div>
+            ) : null}
           </label>
           <button
             type="submit"
