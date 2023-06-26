@@ -12,6 +12,17 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 import { LetterBCanvas } from "./canvas";
+import B from "./B";
+
+import { Canvas } from "@react-three/fiber";
+import {
+  Decal,
+  Float,
+  OrbitControls,
+  Preload,
+  useTexture,
+  Stage,
+} from "@react-three/drei";
 
 const validationSchema = Yup.object({
   name: Yup.string().required("Please enter your name."),
@@ -116,7 +127,14 @@ const Contact = () => {
         variants={slideIn("right", "tween", 0.2, 1)}
         className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
       >
-        <LetterBCanvas />
+        {/* <LetterBCanvas /> */}
+        <Canvas>
+          <Preload all />
+          <Stage environment={null} intensity={0.6}>
+            <B />
+          </Stage>
+          <OrbitControls enableZoom={false} autoRotate />
+        </Canvas>
       </motion.div>
     </div>
   );
