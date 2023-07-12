@@ -72,7 +72,7 @@ const socials = [
   {
     title: "Resume",
     icon: resume,
-    url: "https://drive.google.com/file/d/1AZ2jz9ZgZYwwhbRoyCFZGVwPakLsYXlm/view?usp=sharing",
+    url: "https://drive.google.com/file/d/1lPxCbYeIOA0EQXYeT1BKQd4a-uDkVQYT/view?usp=drive_link",
   },
 ];
 
